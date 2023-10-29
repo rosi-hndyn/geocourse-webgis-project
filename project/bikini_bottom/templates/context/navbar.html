@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+     <!-- sisi kiri -->
+    <div>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="/media/base/spongebob-logo.png" alt="Main Logo" height="50">
+    </a>
+    </div>
+    <!-- sisi tengah -->
+    <div>
+        <a href="" class="btn">Booking Facility</a>
+        <a href="{% url 'facility_list' %}" class="btn">Propose/Manage Facility</a>
+        <a href="" class="btn">Public Infrastucture</a>
+        <a href="" class="btn">About</a>
+    </div>
+
+    <!-- sisi kanan -->
+    <div>
+        {{request.user}}
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-outline-warning">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="btn btn-outline-warning">Login</a>
+        {% endif %}
+    </div>
+    </div>
+  </nav>

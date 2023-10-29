@@ -59,3 +59,19 @@ def facility_form_add(request):
     }
 
     return render(request, 'pages/facility_add.html', context)
+
+# def facility_form_update(request, pk):
+#     objek = get_objek_or_404(Facility, id=pk)
+#     form = Facility(request.POST or None, request.FILES or None, instance=objek)
+#     if request.method =='POST':
+#         if form.is.valid():
+#             data = form.save{commit=False}
+#             data
+
+#     }
+
+def facility_list(request):
+    context = {
+    'data': Facility.objects.all()
+    }
+    return render(request, 'pages/facility_list.html', context)

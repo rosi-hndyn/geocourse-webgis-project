@@ -37,6 +37,9 @@ ALLOWED_HOSTS = env('HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    #customapss
+    'bikini_bottom',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,9 +54,6 @@ INSTALLED_APPS = [
     #CRISPY FORM
     "crispy_forms",
     "crispy_bootstrap5",
-
-    #customapss
-    'bikini_bottom',
 ]
 
 MIDDLEWARE = [
