@@ -1,0 +1,23 @@
+{% extends 'context/base.html' %}
+{% load leaflet_tags %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Delete Facility
+{% endblock %}
+
+{% block head %}
+    {% leaflet_js plugins="forms" %}
+    {% leaflet_css plugins="forms" %}
+{% endblock %}
+
+{% block body %}
+<h1>Apakah anda yakin akan meghapus ini?</h1>
+<form method="POST" enctype="multipart/form-data">
+    <input type="submit" class="btn btn-danger"/>
+    {% csrf_token %}
+    {{form|crispy}}
+</form>
+
+{% endblock %}
+
